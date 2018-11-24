@@ -27,9 +27,7 @@ class MusicLibraryController
       when "genres"
         list_genres
       when "list artist"
-        puts "Type the artist's name."
-        artist_name = gets
-        Artist.find_by_name(artist_name)
+        list_songs_by_artist
       when "list genre"
 
       when "play song"
@@ -60,5 +58,11 @@ class MusicLibraryController
       puts "#{count}. #{genre.name}"
       count += 1
     end
+  end
+
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    artist_name = gets
+    Artist.find_by_name(artist_name)
   end
 end

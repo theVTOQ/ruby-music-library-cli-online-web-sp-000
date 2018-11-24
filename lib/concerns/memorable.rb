@@ -10,15 +10,13 @@ module Memorable
       new_instance
     end
 
-    def sort
-      self.all.sort_by{|element| element.name}
-    end
+    
   end
 
   module InstanceMethods
     def save
       self.class.all << self
-      self.class.all.sort
+      self.class.all.sort_by{|element| element.name}
     end
   end
 end

@@ -37,7 +37,6 @@ class MusicLibraryController
       end
       count += 1
     end
-    
   end
 
   def list_songs

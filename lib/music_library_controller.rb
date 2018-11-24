@@ -82,9 +82,7 @@ class MusicLibraryController
     puts "Please enter the name of a genre:"
     genre_name = gets
     genre = Genre.find_by_name(genre_name)
-    if genre == nil
-      list_songs_by_genre
-    else
+    if genre != nil
       genre.songs.sort_by!{|song| song.name}.each do |song|
         puts "#{count}. #{song.artist.name} - #{song.name} - #{genre.name}"
         count += 1

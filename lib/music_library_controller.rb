@@ -22,12 +22,16 @@ class MusicLibraryController
       case input
       when "songs"
         count = 1
-        Song.all.sort!{}.each do |song| 
+        Song.all.sort_by!{|song| song.name}.each do |song|
           puts song.name
           count += 1
         end
       when "artists"
-        Artist.all.each{|artist| puts artist.name}
+        count = 1
+        Artist.all.sort_by!{|artist| artist.name}.each do |artist|
+          puts artist.name
+          count += 1
+        end
       when "genres"
         Genre.all.each{|genre| puts genre.name}
       when "list artist"

@@ -69,7 +69,8 @@ class MusicLibraryController
     artist = Artist.find_by_name(artist_name)
     binding.pry
     if artist == nil
-      list_songs_by_artist
+      #list_songs_by_artist
+      puts "Please enter the name of an artist:"
     else
       count = 1
       artist.songs.each do |song|

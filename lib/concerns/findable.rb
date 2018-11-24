@@ -1,6 +1,6 @@
 module Findable
-  def find_by_name(name)
-    self.all.detect {|element| element.name == name}
+  def find_by_name(given_name)
+    self.all.detect {|element| element.name == given_name}
   end
 
   def find_or_create_by_name(name)

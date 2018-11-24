@@ -20,7 +20,7 @@ class MusicLibraryController
 
     count = 0
     input = gets
-    while input != "exit" || count <= 10
+    while input != "exit" && count <= 10
       case input
       when "songs"
         list_songs

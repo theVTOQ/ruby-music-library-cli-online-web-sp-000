@@ -94,7 +94,7 @@ class MusicLibraryController
   def play_song
     list_songs
     puts "Which song number would you like to play?"
-    song_number = gets
+    song_number = gets.to_i
     if song_number >= Song.all.size || song_number <= 0
       play_song
     else

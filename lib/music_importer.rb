@@ -6,12 +6,11 @@ class MusicImporter
   end
 
   def files
-    Dir["#{@path}/*.mp3"].collect do |file|
-      full_path = file
-    end
+    files = Dir["#{@path}/*.mp3"]
+    files.collect{|file| file.partition("#{@path}/")[2]}
   end
 
-  def import 
-    
+  def import
+    files.each {|file| Song.create_from_filename(file)}
   end
 end

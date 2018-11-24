@@ -27,6 +27,10 @@ class Song
     #@artist.add_genre(genre) if @artist != nil
   end
 
+  def self.create(name)
+    Song.new(name).save
+  end
+  
   def self.new_from_filename(filename)
     split = filename.split(" - ")
     name = split[0]

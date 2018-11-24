@@ -23,11 +23,7 @@ class MusicLibraryController
       when "songs"
         list_songs
       when "artists"
-        count = 1
-        Artist.all.sort_by!{|artist| artist.name}.each do |artist|
-          puts "#{count}. #{artist.name}"
-          count += 1
-        end
+        list_artists
       when "genres"
         Genre.all.each{|genre| puts genre.name}
       when "list artist"
@@ -46,6 +42,14 @@ class MusicLibraryController
     count = 1
     Song.all.sort_by!{|song| song.name}.each do |song|
       puts "#{count}. #{artist.name} - #{song.name} - #{genre.name}"
+      count += 1
+    end
+  end
+
+  def list_artists
+    count = 1
+    Artist.all.sort_by!{|artist| artist.name}.each do |artist|
+      puts "#{count}. #{artist.name}"
       count += 1
     end
   end

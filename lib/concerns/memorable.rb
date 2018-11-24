@@ -10,7 +10,7 @@ module Memorable
       new_instance
     end
 
-    
+
   end
 
   module InstanceMethods

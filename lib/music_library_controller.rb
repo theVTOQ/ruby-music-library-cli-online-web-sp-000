@@ -21,13 +21,19 @@ class MusicLibraryController
     while input != "exit"
       case input
       when "songs"
-        Song.all.each{|song| puts song.name}
+        count = 1
+        Song.all.sort!{}.each do |song| 
+          puts song.name
+          count += 1
+        end
       when "artists"
         Artist.all.each{|artist| puts artist.name}
       when "genres"
         Genre.all.each{|genre| puts genre.name}
       when "list artist"
-
+        puts "Type the artist's name."
+        artist_name = gets
+        Artist.find_by_name(artist_name)
       when "list genre"
 
       when "play song"

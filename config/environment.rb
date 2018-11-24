@@ -12,7 +12,6 @@ module Concerns
       match == nil ? self.create(name) : match
     end
   end
-
 end
 
 require_all 'lib'

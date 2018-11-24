@@ -7,4 +7,8 @@ module Findable
     match = find_by_name(name)
     match == nil ? self.create(name) : match
   end
+
+  def sort
+    self.all.sort_by{|element| element.name}
+  end
 end

@@ -21,11 +21,7 @@ class MusicLibraryController
     while input != "exit"
       case input
       when "songs"
-        count = 1
-        Song.all.sort_by!{|song| song.name}.each do |song|
-          puts "#{count}. #{artist.name} - #{song.name} - #{genre.name}"
-          count += 1
-        end
+        list_songs
       when "artists"
         count = 1
         Artist.all.sort_by!{|artist| artist.name}.each do |artist|
@@ -43,6 +39,14 @@ class MusicLibraryController
       when "play song"
 
       end
+    end
+  end
+
+  def list_songs
+    count = 1
+    Song.all.sort_by!{|song| song.name}.each do |song|
+      puts "#{count}. #{artist.name} - #{song.name} - #{genre.name}"
+      count += 1
     end
   end
 end

@@ -16,7 +16,7 @@ module Memorable
   module InstanceMethods
     def save
       self.class.all << self
-      self.class.all.sort_by!{|element| element.name}
+      self.class.all.sort{|a, b| a.name <=> b.name}
     end
   end
 end

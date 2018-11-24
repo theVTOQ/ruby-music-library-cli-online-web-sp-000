@@ -5,7 +5,9 @@ module Memorable
     end
 
     def create(name)
-      self.new(name)
+      new_instance = self.new(name)
+      new_instance.save
+      new_instance
     end
   end
 

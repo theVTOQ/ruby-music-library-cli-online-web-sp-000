@@ -10,4 +10,8 @@ class MusicImporter
       full_path = file
     end
   end
+
+  def import 
+    
+  end
 end

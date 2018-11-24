@@ -1,6 +1,6 @@
 module Memorable
   module ClassMethods
-    def destory_all
+    def destroy_all
       self.all.clear
     end
 

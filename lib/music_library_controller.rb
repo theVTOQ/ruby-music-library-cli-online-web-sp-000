@@ -66,10 +66,11 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist_name = gets
     artist = Artist.find_by_name(artist_name)
-    count = 1
+    
     if artist == nil
       list_songs_by_artist
     else
+      count = 1
       artist.songs.each do |song|
         puts "#{count}. #{artist.name} - #{song.name} - #{song.genre.name}"
         count += 1

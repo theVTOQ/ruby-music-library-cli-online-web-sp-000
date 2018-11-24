@@ -70,7 +70,7 @@ class MusicLibraryController
     if artist == nil
       list_songs_by_artist
     else
-      artist.songs.sort_by{|song| song.name}.each do |song|
+      artist.songs.sort_by!{|song| song.name}.each do |song|
         puts "#{count}. #{artist.name} - #{song.name} - #{song.genre.name}"
         count += 1
       end

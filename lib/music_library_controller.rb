@@ -29,7 +29,7 @@ class MusicLibraryController
       when "artists"
         count = 1
         Artist.all.sort_by!{|artist| artist.name}.each do |artist|
-          puts artist.name
+          puts "#{count}. #{artist.name}"
           count += 1
         end
       when "genres"

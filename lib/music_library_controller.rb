@@ -95,9 +95,7 @@ class MusicLibraryController
     list_songs
     puts "Which song number would you like to play?"
     song_number = gets.to_i
-    if song_number >= Song.all.size || song_number <= 0
-      play_song
-    else
+    if !(song_number >= Song.all.size || song_number <= 0)
       song = Song.all[song_number]
       puts "Playing #{song.name} by #{song.artist.name}"
     end

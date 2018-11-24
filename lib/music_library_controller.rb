@@ -18,8 +18,9 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
+    count = 0
     input = gets
-    while input != "exit"
+    while input != "exit" || count <= 10
       case input
       when "songs"
         list_songs
@@ -35,6 +36,7 @@ class MusicLibraryController
         play_song
       end
     end
+    count += 1
   end
 
   def list_songs

@@ -23,7 +23,7 @@ class MusicLibraryController
     while input != "exit"
       input = gets
       case input
-      when "songs"
+      when "list songs"
         list_songs
       when "artists"
         list_artists

@@ -19,7 +19,20 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = gets.downcase
     while input != "exit"
-      
+      case input
+      when "songs"
+        Song.all.each{|song| puts song.name}
+      when "artists"
+        Artist.all.each{|artist| puts artist.name}
+      when "genres"
+        Genre.all.each{|genre| puts genre.name}
+      when "list artist"
+
+      when "list genre"
+
+      when "play song"
+
+      end
     end
   end
 end

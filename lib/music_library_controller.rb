@@ -66,7 +66,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist_name = gets
     artist = Artist.find_by_name(artist_name)
-    
+
     if artist == nil
       list_songs_by_artist
     else

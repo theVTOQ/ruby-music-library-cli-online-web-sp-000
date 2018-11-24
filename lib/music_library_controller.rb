@@ -71,7 +71,7 @@ class MusicLibraryController
     if artist != nil
       #list_songs_by_artist
       count = 1
-      artist.songs.each do |song|
+      artist.songs.sort!{|a, b| a.name <=> b.name}each do |song|
         puts "#{count}. #{song.name} - #{song.genre.name}"
         count += 1
       end

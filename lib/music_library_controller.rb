@@ -95,7 +95,7 @@ class MusicLibraryController
     #list_songs
     puts "Which song number would you like to play?"
     song_number = gets.to_i
-    binding.pry
+    #binding.pry
     if song_number < Song.all.size && song_number > 0
 
       song = Song.all.sort_by{|song| song.name}[song_number]
